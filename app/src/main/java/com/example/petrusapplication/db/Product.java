@@ -16,15 +16,15 @@ public class Product implements Serializable {
     private String name;
     private String description;
     private String imageName;
-    private int quantity;
+    private float price;
     private String email;
-    public Product(@NonNull int id, String name, String description,String imageName,int quantity,String email)
+    public Product(@NonNull int id, String name, String description,String imageName,float price,String email)
     {
         this.id=id;
         this.name = name;
         this.description=description;
         this.imageName=imageName;
-        this.quantity=quantity;
+        this.price=price;
         this.email=email;
     }
     @NonNull
@@ -43,7 +43,7 @@ public class Product implements Serializable {
     public String getImageName() {
         return this.imageName;
     }
-    public int getQuantity(){return this.quantity;}
+    public float getPrice(){return this.price;}
     public String getEmail() {
         return this.email;
     }

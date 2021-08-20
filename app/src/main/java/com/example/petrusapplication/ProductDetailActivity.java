@@ -28,7 +28,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         myViewModel = new ViewModelProvider(this).get(PetrusViewModel.class);
         product= (Product) getIntent().getSerializableExtra("product");
         TextView content=findViewById(R.id.productDetails);
-        content.setText("Name:\n"+product.getName()+"\n\nDescription:\n"+product.getDescription()+"\n\nQuantity:\n"+product.getQuantity()+"\n\nContact:\n"+product.getEmail());
+        content.setText("Name:\n"+product.getName()+"\n\nDescription:\n"+product.getDescription()+"\n\nPrice:\n$"+product.getPrice()+"\n\nContact:\n"+product.getEmail());
         Button contactButton=findViewById(R.id.contactButton);
         contactButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +40,13 @@ public class ProductDetailActivity extends AppCompatActivity {
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }
+            }
+        });
+        Button backButton=findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
