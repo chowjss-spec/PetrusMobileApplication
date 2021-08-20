@@ -6,8 +6,6 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.example.petrusapplication.db.Product;
-
 import java.util.List;
 
 @Dao
