@@ -24,9 +24,10 @@ public class ProductListAdapter extends ListAdapter<Product, ProductViewHolder> 
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         Product current = getItem(position);
-        holder.bind("Name: "+current.getName()+"\nDescription: "+current.getDescription()+"\nQuantity left: "+Integer.toString(current.getQuantity()));
+        holder.bindDescription(current.getName()+"\n\nProduct Description: "+current.getDescription());
         int resourceId=context.getResources().getIdentifier(current.getImageName(),"drawable", context.getPackageName());
-        holder.bind(resourceId);
+        holder.bindImage(resourceId);
+        holder.bindButton(current);
     }
 
     public static class ProductDiff extends DiffUtil.ItemCallback<Product> {

@@ -25,4 +25,5 @@ public interface ProductDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Product product);
+
 }
