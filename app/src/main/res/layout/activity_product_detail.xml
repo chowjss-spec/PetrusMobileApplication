@@ -31,4 +31,14 @@
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent">
 </androidx.appcompat.widget.AppCompatTextView>
+<androidx.appcompat.widget.AppCompatButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/contactButton"
+    android:text="Contact seller"
+    app:layout_constraintTop_toBottomOf="@id/productDetails"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+</androidx.appcompat.widget.AppCompatButton>
 </androidx.constraintlayout.widget.ConstraintLayout>
