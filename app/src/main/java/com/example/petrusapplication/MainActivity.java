@@ -14,10 +14,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button products=findViewById(R.id.products);
+        Button services = findViewById(R.id.services);
+
         products.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        services.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ServiceActivity.class);
                 startActivity(intent);
             }
         });
