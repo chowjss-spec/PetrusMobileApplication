@@ -7,16 +7,22 @@ import androidx.lifecycle.LiveData;
 import com.example.petrusapplication.db.PetrusDatabase;
 import com.example.petrusapplication.db.Product;
 import com.example.petrusapplication.db.ProductDao;
+import com.example.petrusapplication.db.Service;
+import com.example.petrusapplication.db.ServiceDao;
 
 import java.util.List;
 
 public class DataRepository {
     private ProductDao mProductDao;
+    private ServiceDao mServiceDao;
     private LiveData<List<Product>> mAllProducts;
+    private LiveData<List<Service>> mAllServices;
     public DataRepository(Application application) {
         PetrusDatabase db = PetrusDatabase.getDatabase(application);
         mProductDao = db.productDao();
+        mServiceDao = db.serviceDao();
         mAllProducts = mProductDao.getAllProducts();
+        mAllServices = mServiceDao.getAllServices();
     }
 
     // Room executes all queries on a separate thread.
@@ -25,9 +31,19 @@ public class DataRepository {
         return mAllProducts;
     }
 
+    public LiveData<List<Service>> getAllServices() {
+        return mAllServices;
+    }
+
     void insert(Product product) {
         PetrusDatabase.databaseWriteExecutor.execute(() -> {
             mProductDao.insert(product);
+        });
+    }
+
+    void insert(Service service) {
+        PetrusDatabase.databaseWriteExecutor.execute(() -> {
+            mServiceDao.insert(service);
         });
     }
 }
