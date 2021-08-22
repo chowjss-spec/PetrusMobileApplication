@@ -52,7 +52,7 @@ public class ServiceDetailActivity extends AppCompatActivity {
                 intent.setType("text/plain");
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{service.getEmail()});
-                intent.putExtra(Intent.EXTRA_SUBJECT, "For Enquiry\"");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Service Booking Enquiry\"");
                 intent.putExtra(Intent.EXTRA_TEXT,"Please state your enquiry");
                 startActivity(Intent.createChooser(intent, "Send Email"));
             }

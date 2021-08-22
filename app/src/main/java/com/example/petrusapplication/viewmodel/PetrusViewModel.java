@@ -35,4 +35,8 @@ public class PetrusViewModel extends AndroidViewModel {
         return mAllServices;
     }
 
+    public LiveData<List<Service>> getAllServicesByFilter(String filterField, String filterValue) {
+        return mRepository.getAllServicesByFilter(filterField, filterValue);
+    }
+
 }
