@@ -35,6 +35,17 @@ public class DataRepository {
         return mAllServices;
     }
 
+    public LiveData<List<Service>> getAllServicesByFilter(String filterField, String filterValue) {
+        if(filterField.equals("location")){
+            return mServiceDao.getAllServicesByLocationFilter(filterValue);
+        }else if (filterField.equals("category")){
+            return mServiceDao.getAllServicesByCategoryFilter(filterValue);
+        }else if (filterField.equals("species")){
+            return mServiceDao.getAllServicesBySpeciesFilter(filterValue);
+        }
+        return mAllServices;
+    }
+
     void insert(Product product) {
         PetrusDatabase.databaseWriteExecutor.execute(() -> {
             mProductDao.insert(product);
