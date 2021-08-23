@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button products=findViewById(R.id.products);
         Button services = findViewById(R.id.services);
+        Button listing = findViewById(R.id.adoptionListings);
 
         products.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,5 +32,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        listing.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(),AdoptionListingActivity.class);
+            startActivity(intent);
+        });
+
+
     }
 }
