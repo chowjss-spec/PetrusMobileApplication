@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         CardView services = findViewById(R.id.services);
         CardView listing = findViewById(R.id.adoptionListings);
 
+
         products.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,5 +35,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        listing.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(),AdoptionListingActivity.class);
+            startActivity(intent);
+        });
+
+
     }
 }

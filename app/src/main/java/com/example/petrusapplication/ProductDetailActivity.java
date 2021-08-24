@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.petrusapplication.db.Product;
@@ -18,6 +19,9 @@ public class ProductDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
         product= (Product) getIntent().getSerializableExtra("product");
+        ImageView productImage=findViewById(R.id.myImage);
+        int imageId=this.getResources().getIdentifier(product.getImageName(),"drawable", this.getPackageName());
+        productImage.setImageResource(imageId);
         TextView content=findViewById(R.id.productDetails);
         content.setText("Name:\n"+product.getName()+"\n\nDescription:\n"+product.getDescription()+"\n\nPrice:\n$"+product.getPrice()+"\n\nContact:\n"+product.getEmail());
         Button contactButton=findViewById(R.id.contactButton);

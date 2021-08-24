@@ -10,24 +10,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/productDetailTitle"
-    android:textSize="30dp"
+    android:textSize="30sp"
+    android:textColor="@color/black"
     android:text="Product Details"
     android:padding="10dp"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintVertical_bias="0.05">
+    app:layout_constraintVertical_bias="0.03">
 </androidx.appcompat.widget.AppCompatTextView>
+<androidx.appcompat.widget.AppCompatImageView
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:id="@+id/myImage"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintVertical_bias="0.15">
+</androidx.appcompat.widget.AppCompatImageView>
 <androidx.appcompat.widget.AppCompatTextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/productDetails"
-    android:textSize="25dp"
+    android:textSize="20sp"
+    android:textColor="@color/black"
     android:padding="10dp"
     app:layout_constraintTop_toBottomOf="@id/productDetailTitle"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintVertical_bias="0.1">
+    app:layout_constraintVertical_bias="0.6">
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent">
 </androidx.appcompat.widget.AppCompatTextView>
@@ -36,6 +48,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/contactButton"
     android:text="Contact seller"
+    android:textColor="@color/black"
     app:layout_constraintTop_toBottomOf="@id/productDetails"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
@@ -46,6 +59,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/backButton"
         android:text="Back to List"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/productDetails"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/contactButton"
