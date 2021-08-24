@@ -9,5 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="darkbrown">#51361a</color>
     <color name="lightbrown">#EFDECD</color>
+    <color name="light_white">#F8fbf8</color>
+    <color name="primary_blue">#0064a4</color>
+    <color name="oxford_blue">#002147</color>
+    <color name="light_white_2">#FEFEFE</color>
+    <color name="yellow">#FFF002</color>
+    <color name="red">#D60000</color>
 
 </resources>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PetrusApplication</string>
+
+    <string name="label_note_id">Note Id</string>
+    <string name="label_note_title">Note Title</string>
+    <string name="main_title">PETRUS</string>
+    <string name="main_subtitle">The best pet store near you.</string>
+
 </resources>
