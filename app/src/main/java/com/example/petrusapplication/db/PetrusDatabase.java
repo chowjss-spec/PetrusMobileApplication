@@ -80,7 +80,7 @@ abstract class PetrusDatabase extends RoomDatabase {
                 serviceDao.insert(service);
                 service = new Service(7,"Dog Training","4 weeks 1 hour daily course with positive reinforcement trainers ",80,"service7","callcott6@g.co","6/1/2021","Training","Dog","Bukit Batok");
                 serviceDao.insert(service);
-                service = new Service(8,"Dog Washing","Deflead and smelling lovely!",30,"service8","scardew7@qq.com","7/14/2021","Washing","Dog","Buona Vista");
+                service = new Service(8,"Dog Washing","Deflead and smelling lovely!",30,"service8","scardew7@qq.com","7/14/2021","Grooming","Dog","Buona Vista");
                 serviceDao.insert(service);
                 service = new Service(9,"24hr Supervision ","Care for pets with special needs",50,"service9","lhadfield8@shinystat.com","6/15/2021","Care","Mixed","Clementi");
                 serviceDao.insert(service);
@@ -95,6 +95,16 @@ abstract class PetrusDatabase extends RoomDatabase {
                 service = new Service(14,"Puppy Sitting","Need a helping hand to look after your puppy while you are away? Look no further!",50,"service14","pharmen@issuu.com","8/23/2020","Sitting","Dog","Bugis");
                 serviceDao.insert(service);
                 service = new Service(15,"Rabbit Grooming","Body check, nail clipping,  shaping and trimming of fur and many more!",45,"service15","eboyeto@newyorker.com","3/3/2021","Grooming","Rabbit","Bugis");
+                serviceDao.insert(service);
+                service = new Service(16,"Rabbit Drop-Ins","Taking care of your fluffy fur kid in the comfort of its home!",40,"service16","jdallaghanj1@squarespace.com","4/12/2021","Visits","Rabbit","Bradell");
+                serviceDao.insert(service);
+                service = new Service(17,"Dog Walk","Get ready for fun outings!",45,"service17","hmcnyschejr@skype.com","5/8/2021","Walking","Dog","Bukit Batok");
+                serviceDao.insert(service);
+                service = new Service(18,"Rabbit Training","Explore bunny diet and nutrition, medical and many more!",100,"service18","fcockshutk0@skype.com","11/26/2020","Training","Rabbit","Queenstown");
+                serviceDao.insert(service);
+                service = new Service(19,"Training for Rabbits","For agility programs",150,"service19","eoakwellk3@wordpress.com","3/20/2021","Training","Rabbit","Queenstown");
+                serviceDao.insert(service);
+                service = new Service(20,"Rabbit Cleaning","Keep your rabbit clean!",30,"service20","csarchwelll6@yahoo.com","8/29/2020","Grooming","Rabbit","Redhill");
                 serviceDao.insert(service);
             });
         }

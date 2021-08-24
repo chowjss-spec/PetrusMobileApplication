@@ -67,25 +67,24 @@ public class ServiceActivity extends AppCompatActivity {
                     filterValue.add("None");
                     //Location
                     if(i == 1){
-                        filterValue.add("Buona Vista");
-                        filterValue.add("Redhill");
                         filterValue.add("Ang Mo Kio");
-                        filterValue.add("Clementi");
-                        filterValue.add("Queenstown");
-                        filterValue.add("Bukit Batok");
                         filterValue.add("Bradell");
+                        filterValue.add("Bukit Batok");
+                        filterValue.add("Clementi");
+                        filterValue.add("Buona Vista");
+                        filterValue.add("Queenstown");
+                        filterValue.add("Redhill");
                         filterValue.add("Tanjong Pagar");
                         filterValue.add("Bugis");
                     }else if (i == 2){//Category
                         filterValue.add("Sitting");
-                        filterValue.add("Visits");
                         filterValue.add("Care");
-                        filterValue.add("Taxi");
+                        filterValue.add("Boarding");
+                        filterValue.add("Visits");
+                        filterValue.add("Grooming");
                         filterValue.add("Walking");
                         filterValue.add("Training");
-                        filterValue.add("Washing");
-                        filterValue.add("Grooming");
-                        filterValue.add("Boarding");
+                        filterValue.add("Taxi");
                         filterValue.add("Photography");
                     }else{//Species
                         filterValue.add("Mixed");
