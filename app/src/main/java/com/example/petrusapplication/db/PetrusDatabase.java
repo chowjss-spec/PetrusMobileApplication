@@ -51,15 +51,15 @@ abstract class PetrusDatabase extends RoomDatabase {
                 ProductDao dao = INSTANCE.productDao();
                 dao.deleteAll();
 
-                Product product = new Product(1,"Steel Toothed Hairbrush","Specially made for grooming long haired animals","photo1",15,"petsupplies@petrus.net");
+                Product product = new Product(1,"Steel Toothed Hairbrush","Specially made for grooming long haired animals","Photo1",15,"petsupplies@petrus.net");
                 dao.insert(product);
-                product = new Product(2,"Circular Comb","Specially made for grooming short haired animals","photo2",37,"petsupplies@petrus.net");
+                product = new Product(2,"Circular Comb","Specially made for grooming short haired animals","Photo2",37,"petsupplies@petrus.net");
                 dao.insert(product);
-                product = new Product(3,"Silicon finger toothbrush","Effective at removing plague","photo3",4,"petsupplies@petrus.net");
+                product = new Product(3,"Silicon finger toothbrush","Effective at removing plague","Photo3",4,"petsupplies@petrus.net");
                 dao.insert(product);
-                product = new Product(4,"360 degrees toothbrush","Comfortable and easy to use","photo4",12,"petsupplies@petrus.net");
+                product = new Product(4,"360 degrees toothbrush","Comfortable and easy to use","Photo4",12,"petsupplies@petrus.net");
                 dao.insert(product);
-                product = new Product(5,"Peanut butter treats","Tasty and delicious","photo5",87,"petsupplies@petrus.net");
+                product = new Product(5,"Peanut butter treats","Tasty and delicious","Photo5",87,"petsupplies@petrus.net");
                 dao.insert(product);
 
                 ServiceDao serviceDao = INSTANCE.serviceDao();
