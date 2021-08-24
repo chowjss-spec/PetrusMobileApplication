@@ -166,6 +166,17 @@ public class AdoptionListing {
         try{
             this.AdoptionListingID = object.getString("adoptionListingID");
             this.Name = object.getString("name");
+            this.Image = object.getString("image");
+            int ordinalStatus = Integer.parseInt(object.getString("applicationStatus"));
+            this.ApplicationStatus = ApplicationStatus.values()[ordinalStatus];
+
+            int ordinalBreed = Integer.parseInt(object.getString("breed1"));
+            this.Breed1 = Breed1.values()[ordinalBreed];
+
+            int ordinalColor = Integer.parseInt(object.getString("color1"));
+            this.Color1 = Color1.values()[ordinalColor];
+
+            this.Age = Integer.parseInt(object.getString("age"));
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -180,28 +191,9 @@ enum Species
     Cat, Dog
 }
 
-enum Breed
-{
-    Affenpinscher,
-    AfghanHound,
-    AiredaleTerrier,
-    Akbash,
-    Akita,
-    AlaskanMalamute,
-    AmericanBulldog,
-    AmericanEskimoDog,
-    AmericanHairlessTerrier,
-    AmericanStaffordshireTerrier
-}
-
 enum Gender
 {
     Male, Female, Mixed
-}
-
-enum Color
-{
-    Black, Brown, Golden, Yellow, Cream, Gray, White
 }
 
 enum MaturitySize
@@ -244,8 +236,3 @@ enum Health
     Unknown
 }
 
-enum ApplicationStatus
-{
-    Open,
-    Closed
-}

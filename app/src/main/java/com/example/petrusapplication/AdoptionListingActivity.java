@@ -60,7 +60,7 @@ public class AdoptionListingActivity extends AppCompatActivity {
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
 //                                var selectedItem = (String) parent.getItemAtPosition(position);
                                 AdoptionListing listing = adoptionListingAdapter.getItem(position);
-                                Intent intent = new Intent(AdoptionListingActivity.this, AdoptionRequestsActivity.class);
+                                Intent intent = new Intent(AdoptionListingActivity.this, AdoptionListingWebViewActivity.class);
                                 intent.putExtra("listing",listing.getAdoptionListingID());
 
                                 startActivity(intent);
