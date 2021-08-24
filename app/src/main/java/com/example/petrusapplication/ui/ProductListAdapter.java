@@ -25,7 +25,8 @@ public class ProductListAdapter extends ListAdapter<Product, ProductViewHolder> 
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         Product current = getItem(position);
         holder.bindDescription(current.getName()+"\nPrice: $"+current.getPrice());
-        int resourceId=context.getResources().getIdentifier(current.getImageName(),"drawable", context.getPackageName());
+        String imgName = current.getImageName().toLowerCase();
+        int resourceId=context.getResources().getIdentifier(imgName,"drawable", context.getPackageName());
         holder.bindImage(resourceId);
         holder.bindButton(current);
     }
