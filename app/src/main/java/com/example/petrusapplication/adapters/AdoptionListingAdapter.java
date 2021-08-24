@@ -49,15 +49,13 @@ public class AdoptionListingAdapter extends ArrayAdapter<AdoptionListing> {
         viewHolder.id.setText(adoptionListing.getAdoptionListingID());
         viewHolder.title.setText(adoptionListing.getName());
         String imgName = adoptionListing.getImage();
-        String imgTrimmed = imgName.substring(0,imgName.lastIndexOf("."));
+        String imgTrimmed = imgName.substring(0,imgName.lastIndexOf(".")).toLowerCase();
         int resourceId=context.getResources().getIdentifier(imgTrimmed,"drawable", context.getPackageName());
         viewHolder.img.setImageResource(resourceId);
         viewHolder.status.setText(adoptionListing.getApplicationStatus().toString());
         viewHolder.breed.setText(adoptionListing.getBreed1().toString());
         viewHolder.color.setText(adoptionListing.getColor1().toString());
         viewHolder.age.setText(String.valueOf(adoptionListing.getAge()));
-
-
 
         return convertView;
     }
