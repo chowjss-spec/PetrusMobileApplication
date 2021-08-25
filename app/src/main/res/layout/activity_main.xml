@@ -20,15 +20,15 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/main_title"
-            android:textColor="@color/oxford_blue"
-            android:textSize="30dp" />
+            android:textColor="@color/primary_blue"
+            android:textSize="54dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="@string/main_subtitle"
-            android:textColor="@color/oxford_blue"
+            android:textColor="@color/primary_blue"
             android:layout_marginTop="5dp"
             android:textStyle="bold"
             android:textSize="16dp"/>
@@ -57,12 +57,12 @@
                     android:id="@+id/adoption_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Adoption"
-                    android:textSize="30dp"
-                    android:textColor="@color/light_white_2"
-                    android:fontFamily="@font/roboto_bold"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp" />
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Adoption"
+                    android:textColor="@color/light_white_2"
+                    android:textSize="30dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:text="Products"
                     android:textSize="30dp"
-                    android:textColor="@color/oxford_blue"
+                    android:textColor="@color/primary_blue"
                     android:fontFamily="@font/roboto_bold"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp" />
@@ -119,7 +119,7 @@
                     android:layout_below="@id/product_title"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="3dp"
-                    android:textColor="@color/oxford_blue"
+                    android:textColor="@color/primary_blue"
                     android:textStyle="bold"
                     android:fontFamily="@font/roboto"
                     android:textSize="16dp" />
