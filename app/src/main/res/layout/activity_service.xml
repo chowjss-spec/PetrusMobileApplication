@@ -14,7 +14,7 @@
         android:text="Pet Services Listing"
         android:textSize="30dp"
         android:fontFamily="@font/roboto_bold"
-        android:textColor="@color/oxford_blue"
+        android:textColor="@color/primary_blue"
         android:id="@+id/title"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
