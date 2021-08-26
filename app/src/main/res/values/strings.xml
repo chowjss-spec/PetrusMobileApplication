@@ -5,5 +5,14 @@
     <string name="label_note_title">Note Title</string>
     <string name="main_title">PETRUS</string>
     <string name="main_subtitle">The best pet store near you.</string>
-
+    <string-array name="residenceArray">
+        <item>HDB</item>
+        <item>Private</item>
+    </string-array>
+    <string-array name="dogsOwnedArray">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>>3</item>
+    </string-array>
 </resources>
