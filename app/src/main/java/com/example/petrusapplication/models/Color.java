@@ -1,38 +1,37 @@
 package com.example.petrusapplication.models;
 
 public enum Color {
-    Black
-    {
+    Black {
         @Override
         public String toString() {
             return "Black";
         }
-    }, Brown{
+    }, Brown {
         @Override
         public String toString() {
             return "Brown";
         }
-    }, Golden{
+    }, Gold {
         @Override
         public String toString() {
             return "Golden";
         }
-    }, Yellow{
+    }, Yellow {
         @Override
         public String toString() {
             return "Yellow";
         }
-    }, Cream{
+    }, Cream {
         @Override
         public String toString() {
             return "Cream";
         }
-    }, Gray{
+    }, Gray {
         @Override
         public String toString() {
             return "Gray";
         }
-    }, White{
+    }, White {
         @Override
         public String toString() {
             return "White";
