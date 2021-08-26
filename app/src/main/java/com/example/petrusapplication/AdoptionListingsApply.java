@@ -2,7 +2,9 @@ package com.example.petrusapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,7 +32,17 @@ public class AdoptionListingsApply extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adoption_listings_apply);
-
+        Button logout=findViewById(R.id.Logoutt);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences appSharedPrefs = getSharedPreferences(
+                        "petrus", Context.MODE_PRIVATE);
+                appSharedPrefs.edit().remove("userDetails").commit();;
+                Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         getAdoptionListing();

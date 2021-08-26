@@ -2,6 +2,7 @@ package com.example.petrusapplication.clients;
 
 import android.content.Context;
 import android.util.Log;
+import android.util.Xml;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -12,6 +13,7 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 import cz.msebera.android.httpclient.Header;
@@ -48,7 +50,7 @@ public class MyLoopjTask2 {
         asyncHttpClient.post(context,BASE_URL, entity, "application/json", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers,byte[]bytes) {
-                String response=Base64.getEncoder().encodeToString(bytes);
+                String response= new String(bytes, StandardCharsets.UTF_8);
                 loopjListener.taskCompleted(response);
                 Log.i("createApplication","onSuccess "+response);
             }
@@ -56,6 +58,7 @@ public class MyLoopjTask2 {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] response,Throwable throwable) {
                 Log.e("createApplication", "onFailure: " + response);
+                loopjListener.taskCompleted("");
             }
         });
     }
