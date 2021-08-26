@@ -6,9 +6,9 @@ import org.json.JSONObject;
 import java.time.LocalDate;
 
 public class AdoptionRequest {
-    private String AdoptionRequestId;
-    private String Description;
-    private LocalDate RequestDate;
+    private String adoptionRequestId;
+    private String description;
+    private LocalDate requestDate;
     private Residence residenceType;
     private RequestStatus requestStatus;
     private int dogsOwned;
@@ -16,26 +16,26 @@ public class AdoptionRequest {
     private String AdoptionListingID;
 
     public AdoptionRequest(String adoptionRequestId, String description, LocalDate requestDate, Residence residenceType, RequestStatus requestStatus, int dogsOwned, String userID, String adoptionListingID) {
-        AdoptionRequestId = adoptionRequestId;
-        Description = description;
-        RequestDate = requestDate;
+        adoptionRequestId = adoptionRequestId;
+        description = description;
+        requestDate = requestDate;
         this.residenceType = residenceType;
-        this.requestStatus = requestStatus;
+        requestStatus = requestStatus;
         this.dogsOwned = dogsOwned;
         UserID = userID;
         AdoptionListingID = adoptionListingID;
     }
 
     public String getAdoptionRequestId() {
-        return AdoptionRequestId;
+        return adoptionRequestId;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public LocalDate getRequestDate() {
-        return RequestDate;
+        return requestDate;
     }
 
     public Residence getResidenceType() {
@@ -59,9 +59,9 @@ public class AdoptionRequest {
     }
     public AdoptionRequest(JSONObject object){
         try{
-            this.AdoptionRequestId = object.getString("adoptionRequestId");
+            this.adoptionRequestId = object.getString("adoptionRequestId");
             this.AdoptionListingID = object.getString("adoptionListingID");
-            this.requestStatus = RequestStatus.valueOf(object.getString("requestStatus"));
+            requestStatus = RequestStatus.valueOf(object.getString("requestStatus"));
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -74,4 +74,3 @@ enum Residence
 {
     Pending, HDB, Private
 }
-

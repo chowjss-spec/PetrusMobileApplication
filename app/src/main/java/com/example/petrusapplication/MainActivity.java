@@ -1,6 +1,7 @@
 package com.example.petrusapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button products=findViewById(R.id.products);
-        Button services = findViewById(R.id.services);
-        Button listing = findViewById(R.id.adoptionListings);
+
+        CardView products=findViewById(R.id.products);
+        CardView services = findViewById(R.id.services);
+        CardView listing = findViewById(R.id.adoptionListings);
+
 
         products.setOnClickListener(new View.OnClickListener() {
             @Override

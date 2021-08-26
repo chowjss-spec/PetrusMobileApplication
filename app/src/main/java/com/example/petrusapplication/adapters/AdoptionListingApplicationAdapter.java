@@ -1,23 +1,25 @@
 package com.example.petrusapplication.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import com.example.petrusapplication.R;
 import com.example.petrusapplication.AdoptionListing;
+import com.example.petrusapplication.CreateApplicationActivity;
+import com.example.petrusapplication.R;
 
 import java.util.ArrayList;
 
-public class AdoptionListingAdapter extends ArrayAdapter<AdoptionListing> {
+public class AdoptionListingApplicationAdapter extends ArrayAdapter<AdoptionListing> {
     private final Context context;
-    public AdoptionListingAdapter(Context context, ArrayList<AdoptionListing> notes) {
-        super(context, R.layout.item_adoptionlisting, notes);
+    public AdoptionListingApplicationAdapter(Context context, ArrayList<AdoptionListing> notes) {
+        super(context, R.layout.item_adoptionlistingapplication, notes);
         this.context=context;
     }
 
@@ -30,7 +32,7 @@ public class AdoptionListingAdapter extends ArrayAdapter<AdoptionListing> {
             viewHolder = new ViewHolder();
 
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            convertView = inflater.inflate(R.layout.item_adoptionlisting, parent, false);
+            convertView = inflater.inflate(R.layout.item_adoptionlistingapplication, parent, false);
 
             viewHolder.id = (TextView) convertView.findViewById(R.id.value_note_id);
             viewHolder.title = (TextView) convertView.findViewById(R.id.value_note_title);
@@ -39,7 +41,7 @@ public class AdoptionListingAdapter extends ArrayAdapter<AdoptionListing> {
             viewHolder.breed = (TextView) convertView.findViewById(R.id.petBreed);
             viewHolder.color = (TextView) convertView.findViewById(R.id.petColor);
             viewHolder.age = (TextView) convertView.findViewById(R.id.petAge);
-
+            viewHolder.applyMe=(Button) convertView.findViewById(R.id.applyListing);
             convertView.setTag(viewHolder);
 
         } else {
@@ -56,6 +58,14 @@ public class AdoptionListingAdapter extends ArrayAdapter<AdoptionListing> {
         viewHolder.breed.setText(adoptionListing.getBreed1().name());
         viewHolder.color.setText(adoptionListing.getColor1().name());
         viewHolder.age.setText(String.valueOf(adoptionListing.getAge()));
+        viewHolder.applyMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, CreateApplicationActivity.class);
+                intent.putExtra("adoptionListingId",adoptionListing.getAdoptionListingID());
+                context.startActivity(intent);
+            }
+        });
 
         return convertView;
     }
@@ -68,5 +78,6 @@ public class AdoptionListingAdapter extends ArrayAdapter<AdoptionListing> {
         TextView breed;
         TextView color;
         TextView age;
+        Button applyMe;
     }
 }
