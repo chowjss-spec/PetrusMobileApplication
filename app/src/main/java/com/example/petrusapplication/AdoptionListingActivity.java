@@ -2,23 +2,28 @@ package com.example.petrusapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.petrusapplication.adapters.AdoptionListingAdapter;
 import com.example.petrusapplication.clients.AdoptionListingRestClient;
-import com.example.petrusapplication.models.AdoptionListing;
+import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.entity.StringEntity;
 
 public class AdoptionListingActivity extends AppCompatActivity {
 
@@ -33,6 +38,14 @@ public class AdoptionListingActivity extends AppCompatActivity {
 
 
         getAdoptionListing();
+        Button loginBttn=findViewById(R.id.loginButton);
+        loginBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void getAdoptionListing() {
