@@ -1,61 +1,71 @@
 package com.example.petrusapplication.models;
 
 public enum Breed {
-    Affenpinscher {
+    Affenpinscher
+    {
         @Override
         public String toString() {
             return "Affenpinscher";
         }
-    },
-    AfghanHound {
+    }
+    ,
+    AfghanHound
+    {
         @Override
         public String toString() {
             return "AfghanHound";
         }
     },
-    AiredaleTerrier {
+    AiredaleTerrier
+    {
         @Override
         public String toString() {
             return "Airedale Terrier";
         }
     },
-    Akbash {
+    Akbash
+    {
         @Override
         public String toString() {
             return "Akbash";
         }
     },
-    Akita {
+    Akita
+    {
         @Override
         public String toString() {
             return "Akita";
         }
     },
-    AlaskanMalamute {
+    AlaskanMalamute
+    {
         @Override
         public String toString() {
             return "Alaskan Malamute";
         }
     },
-    AmericanBulldog {
+    AmericanBulldog
+    {
         @Override
         public String toString() {
             return "American Bulldog";
         }
     },
-    AmericanEskimoDog {
+    AmericanEskimoDog
+    {
         @Override
         public String toString() {
             return "American Eskimo Dog";
         }
     },
-    AmericanHairlessTerrier {
+    AmericanHairlessTerrier
+    {
         @Override
         public String toString() {
             return "American Hairless Terrier";
         }
     },
-    AmericanStaffordshireTerrier {
+    AmericanStaffordshireTerrier{
         @Override
         public String toString() {
             return "American Staffordshire Terrier";
