@@ -27,6 +27,7 @@ public class MyLoopjTask2 {
     OnLoopjCompleted loopjListener;
 
     String BASE_URL = "https://10.0.2.2:44327/AdoptionListingAPI/application";
+    String jsonResponse;
 
     public MyLoopjTask2(Context context, OnLoopjCompleted listener) {
         asyncHttpClient = new AsyncHttpClient();
