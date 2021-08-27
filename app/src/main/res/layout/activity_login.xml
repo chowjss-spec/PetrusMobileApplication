@@ -13,7 +13,7 @@
         android:layout_marginTop="150dp"
         android:fontFamily="@font/roboto_bold"
         android:letterSpacing="0.03"
-        android:text="Login"
+        android:text="Log In"
         android:textColor="@color/primary_blue"
         android:textSize="54dp"
         android:textStyle="bold" />
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
-        android:text="Welcome back"
+        android:text="Welcome Back"
         android:textColor="@color/primary_blue"
         android:textSize="16dp"
         android:textStyle="bold" />
