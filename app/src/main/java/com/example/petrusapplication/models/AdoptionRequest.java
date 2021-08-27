@@ -18,11 +18,11 @@ public class AdoptionRequest {
     private String name;
     private int age;
     private Breed breed1;
-
-
-
     private Color color1;
     private  String image;
+    private String listerEmail;
+
+
 
     public AdoptionRequest(String adoptionRequestId, String description, LocalDate requestDate, Residence residenceType, RequestStatus requestStatus, int dogsOwned, String userID, String adoptionListingID) {
         adoptionRequestId = adoptionRequestId;
@@ -91,6 +91,10 @@ public class AdoptionRequest {
         return adoptionListingID;
     }
 
+    public String getListerEmail() {
+        return listerEmail;
+    }
+
     public AdoptionRequest(JSONObject object){
         try{
             this.adoptionRequestId = object.getString("adoptionRequestId");
@@ -105,8 +109,11 @@ public class AdoptionRequest {
             int ordinalColor = Integer.parseInt(listing.getString("color1"));
             this.color1 = color1.values()[ordinalColor];
             this.age = Integer.parseInt(listing.getString("age"));
-
-
+            int ordinalRequestStatus = Integer.parseInt(object.getString("requestStatus"));
+            this.requestStatus = requestStatus.values()[ordinalRequestStatus];
+            JSONObject user = listing.getJSONObject("user");
+            this.listerEmail=user.getString("emailAddress");
+//            System.out.println("email address is currently" + user.getString("emailAddress"));
         }
         catch (JSONException e) {
             e.printStackTrace();
