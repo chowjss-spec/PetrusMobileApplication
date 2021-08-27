@@ -4,38 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".CreateApplicationActivity">
-
-    <!--    <androidx.appcompat.widget.AppCompatEditText-->
-    <!--        android:id="@+id/dogsOwned"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="50dp"-->
-    <!--        android:hint="Enter number of dogs owned"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/dogsOwnedSpinner"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/dogsOwnedLabel"></androidx.appcompat.widget.AppCompatEditText>-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ApplicationPageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="45sp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/primary_blue"
+        android:text="Application Form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03">
+    </androidx.appcompat.widget.AppCompatTextView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/userId"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/adoptionId"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"></androidx.appcompat.widget.AppCompatTextView>
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ApplicationPageTitle"
+        app:layout_constraintVertical_bias="0.05">
+    </androidx.appcompat.widget.AppCompatTextView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/adoptionId"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/residenceLabel"
-        app:layout_constraintTop_toBottomOf="@+id/userId"
-        tools:layout_editor_absoluteX="0dp"></androidx.appcompat.widget.AppCompatTextView>
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userId"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintVertical_bias="0.05">
+
+    </androidx.appcompat.widget.AppCompatTextView>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
         android:hint="Describe why you want to adopt"
         app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintTop_toBottomOf="@+id/dogsOwnedSpinner"
@@ -54,6 +67,9 @@
         android:id="@+id/residentSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintBottom_toTopOf="@+id/dogsOwnedLabel"
         app:layout_constraintTop_toBottomOf="@+id/residenceLabel"
         tools:layout_editor_absoluteX="0dp" />
@@ -63,6 +79,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please enter the type of residence"
+        android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/residentSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adoptionId" />
@@ -71,6 +89,8 @@
         android:id="@+id/dogsOwnedLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/black"
         android:text="Please enter the number of dogs you own currently"
         app:layout_constraintBottom_toTopOf="@+id/dogsOwnedSpinner"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,6 +102,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintTop_toBottomOf="@+id/dogsOwnedLabel"
+        app:layout_constraintVertical_bias="0.2"
         tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
