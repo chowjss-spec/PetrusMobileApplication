@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/light_white_2"
+    android:padding="10dp"
     tools:context=".AdoptionListingActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Pet Adoption Listing"
-        android:textSize="30dp"
+        android:textSize="35dp"
+        android:gravity="center_horizontal"
         android:fontFamily="@font/roboto_bold"
         android:textColor="@color/primary_blue"
         android:id="@+id/title"
