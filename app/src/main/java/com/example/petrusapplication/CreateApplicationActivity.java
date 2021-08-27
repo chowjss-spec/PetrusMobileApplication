@@ -100,7 +100,7 @@ public class CreateApplicationActivity extends AppCompatActivity implements OnLo
     @Override
     public void taskCompleted(String result) {
         if (result.contains("success")) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Application is successful", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getApplicationContext(), "Application is successful!", Toast.LENGTH_LONG);
             toast.show();
         }
         else

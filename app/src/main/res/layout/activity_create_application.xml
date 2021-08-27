@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_white_2"
     tools:context=".CreateApplicationActivity">
 
     <!--    <androidx.appcompat.widget.AppCompatEditText-->
@@ -14,74 +15,123 @@
     <!--        app:layout_constraintBottom_toTopOf="@+id/dogsOwnedSpinner"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/dogsOwnedLabel"></androidx.appcompat.widget.AppCompatEditText>-->
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/userId"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/adoptionId"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"></androidx.appcompat.widget.AppCompatTextView>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/adoptionId"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/residenceLabel"
-        app:layout_constraintTop_toBottomOf="@+id/userId"
-        tools:layout_editor_absoluteX="0dp"></androidx.appcompat.widget.AppCompatTextView>
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Describe why you want to adopt"
-        app:layout_constraintBottom_toTopOf="@+id/submit"
-        app:layout_constraintTop_toBottomOf="@+id/dogsOwnedSpinner"
-        tools:layout_editor_absoluteX="28dp"></androidx.appcompat.widget.AppCompatEditText>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <Spinner
-        android:id="@+id/residentSpinner"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/dogsOwnedLabel"
-        app:layout_constraintTop_toBottomOf="@+id/residenceLabel"
-        tools:layout_editor_absoluteX="0dp" />
+        android:text="Application Form"
+        android:textSize="42dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/primary_blue"
+        android:id="@+id/application_title"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/userId"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/oxford_blue"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@id/application_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/adoptionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/oxford_blue"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userId" />
 
     <TextView
         android:id="@+id/residenceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:text="Please enter the type of residence"
-        app:layout_constraintBottom_toTopOf="@+id/residentSpinner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adoptionId" />
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/oxford_blue"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@id/adoptionId"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/residentSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/residenceLabel"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/dogsOwnedLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:text="Please enter the number of dogs you own currently"
-        app:layout_constraintBottom_toTopOf="@+id/dogsOwnedSpinner"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/residentSpinner" />
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/oxford_blue"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@id/residentSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/dogsOwnedSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/description"
-        app:layout_constraintTop_toBottomOf="@+id/dogsOwnedLabel"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dogsOwnedLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textboxapplication1"
+        android:fontFamily="@font/roboto"
+        android:paddingLeft="20dp"
+        android:hint="Describe why you want to adopt"
+        app:layout_constraintTop_toBottomOf="@id/dogsOwnedSpinner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button1"
+        android:fontFamily="@font/roboto"
+        android:text="SUBMIT"
+        android:textColor="@color/light_white_2"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
