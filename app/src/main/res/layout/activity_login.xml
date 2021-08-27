@@ -48,6 +48,7 @@
         android:background="@drawable/textbox1"
         android:fontFamily="@font/roboto"
         android:hint="Password"
+        android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:textColor="@color/primary_blue" />
 
