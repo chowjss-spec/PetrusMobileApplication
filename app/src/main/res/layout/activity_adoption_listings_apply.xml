@@ -17,7 +17,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Pet Adoption Listing"
-        android:textColor="@color/primary_blue"
+        android:textColor="@color/oxford_blue"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/list_applyListing"
         app:layout_constraintLeft_toLeftOf="parent"
