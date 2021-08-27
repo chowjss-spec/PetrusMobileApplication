@@ -1,6 +1,7 @@
 package com.example.petrusapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -31,7 +32,9 @@ public class UserActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        userDetails.setText("Welcome "+name);
+      
+        userDetails.setText("Welcome back, "+ name + "!");
+      
         Button logout=findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +45,9 @@ public class UserActivity extends AppCompatActivity {
                 finish();
             }
         });
-        Button applyAdopt=findViewById(R.id.startApply);
+
+        CardView applyAdopt=findViewById(R.id.startApply);
+
         applyAdopt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,14 +55,14 @@ public class UserActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button viewAdoptionRequest = findViewById(R.id.viewAdoptionRequest);
         viewAdoptionRequest.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),ViewAdoptionRequestsActivity.class);
             startActivity(intent);
         });
-
-
-
+      
+      
     }
     public static String printJsonObjectByKeyName(JSONObject jsonObj, String keyName) throws JSONException {
         String output="";
