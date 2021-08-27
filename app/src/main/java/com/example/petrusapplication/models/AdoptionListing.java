@@ -1,9 +1,5 @@
-package com.example.petrusapplication;
+package com.example.petrusapplication.models;
 
-
-import com.example.petrusapplication.models.ApplicationStatus;
-import com.example.petrusapplication.models.Breed;
-import com.example.petrusapplication.models.Color;
 
 import org.json.JSONException;
 import org.json.JSONObject;

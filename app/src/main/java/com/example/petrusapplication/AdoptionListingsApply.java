@@ -7,13 +7,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.petrusapplication.adapters.AdoptionListingAdapter;
 import com.example.petrusapplication.adapters.AdoptionListingApplicationAdapter;
 import com.example.petrusapplication.clients.AdoptionListingRestClient;
+import com.example.petrusapplication.models.AdoptionListing;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
