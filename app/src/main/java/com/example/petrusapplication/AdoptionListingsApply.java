@@ -39,6 +39,7 @@ public class AdoptionListingsApply extends AppCompatActivity {
                         "petrus", Context.MODE_PRIVATE);
                 appSharedPrefs.edit().remove("userDetails").commit();;
                 Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
             }
         });
