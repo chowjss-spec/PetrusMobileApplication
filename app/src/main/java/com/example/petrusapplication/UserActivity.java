@@ -32,7 +32,9 @@ public class UserActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+      
         userDetails.setText("Welcome back, "+ name + "!");
+      
         Button logout=findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,15 +45,24 @@ public class UserActivity extends AppCompatActivity {
                 finish();
             }
         });
+
         CardView applyAdopt=findViewById(R.id.startApply);
+
         applyAdopt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(),AdoptionListingsApply.class);
                 startActivity(intent);
-
             }
         });
+
+        Button viewAdoptionRequest = findViewById(R.id.viewAdoptionRequest);
+        viewAdoptionRequest.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(),ViewAdoptionRequestsActivity.class);
+            startActivity(intent);
+        });
+      
+      
     }
     public static String printJsonObjectByKeyName(JSONObject jsonObj, String keyName) throws JSONException {
         String output="";

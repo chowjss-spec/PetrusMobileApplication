@@ -1,182 +1,181 @@
 package com.example.petrusapplication.models;
 
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.time.LocalDate;
 
 public class AdoptionListing {
-    private String AdoptionListingID;
-    private Species Species;
-    private String Name;
-    private int Age;
-    private  Breed Breed1;
-    private  Breed Breed2;
-    private  Gender Gender;
-    private  Color Color1;
-    private  Color Color2;
-    private  Color Color3;
+    private String adoptionListingID;
+    private Species species;
+    private String name;
+    private int age;
+    private Breed breed1;
+    private  Breed breed2;
+    private  Gender gender;
+    private Color color1;
+    private  Color color2;
+    private  Color color3;
     private  MaturitySize maturitySize;
-    private  FurLength FurLength;
-    private  Vaccinated Vaccinated;
-    private  Dewormed Dewormed;
-    private  Sterilized Sterilized;
-    private  Health Health;
-    private  int QuantityRepresented;
-    private  double Fee;
-    private  String Video;
-    private  String Image;
-    private  String Description;
-    private  LocalDate ListingDate;
-    private  ApplicationStatus ApplicationStatus;
-    private  String AcceptedRequest;
-    private  String UserID;
+    private  FurLength furLength;
+    private  Vaccinated vaccinated;
+    private  Dewormed dewormed;
+    private  Sterilized sterilized;
+    private  Health health;
+    private  int quantityRepresented;
+    private  double fee;
+    private  String video;
+    private  String image;
+    private  String description;
+    private  LocalDate listingDate;
+    private ApplicationStatus applicationStatus;
+    private  String acceptedRequest;
+    private  String userID;
 
     public String getAdoptionListingID() {
-        return AdoptionListingID;
+        return adoptionListingID;
     }
 
-    public com.example.petrusapplication.models.Species getSpecies() {
-        return Species;
+    public Species getSpeciess() {
+        return species;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public int getAge() {
-        return Age;
+        return age;
     }
 
     public Breed getBreed1() {
-        return Breed1;
+        return breed1;
     }
 
     public Breed getBreed2() {
-        return Breed2;
+        return breed2;
     }
 
-    public com.example.petrusapplication.models.Gender getGender() {
-        return Gender;
+    public Gender getGender() {
+        return gender;
     }
 
     public Color getColor1() {
-        return Color1;
+        return color1;
     }
 
     public Color getColor2() {
-        return Color2;
+        return color2;
     }
 
     public Color getColor3() {
-        return Color3;
+        return color3;
     }
 
     public MaturitySize getMaturitySize() {
         return maturitySize;
     }
 
-    public com.example.petrusapplication.models.FurLength getFurLength() {
-        return FurLength;
+    public FurLength getFurLength() {
+        return furLength;
     }
 
-    public com.example.petrusapplication.models.Vaccinated getVaccinated() {
-        return Vaccinated;
+    public Vaccinated getVaccinated() {
+        return vaccinated;
     }
 
-    public com.example.petrusapplication.models.Dewormed getDewormed() {
-        return Dewormed;
+    public Dewormed getDewormed() {return dewormed; }
+
+    public Sterilized getSterilized() {
+        return sterilized;
     }
 
-    public com.example.petrusapplication.models.Sterilized getSterilized() {
-        return Sterilized;
-    }
-
-    public com.example.petrusapplication.models.Health getHealth() {
-        return Health;
+    public Health getHealth() {
+        return health;
     }
 
     public int getQuantityRepresented() {
-        return QuantityRepresented;
+        return quantityRepresented;
     }
 
     public double getFee() {
-        return Fee;
+        return fee;
     }
 
     public String getVideo() {
-        return Video;
+        return video;
     }
 
     public String getImage() {
-        return Image;
+        return image;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getDescriptionn() {
+        return description;
     }
 
-    public LocalDate getListingDate() {
-        return ListingDate;
+    public LocalDate getListingDatee() {
+        return listingDate;
     }
 
-    public com.example.petrusapplication.models.ApplicationStatus getApplicationStatus() {
-        return ApplicationStatus;
+    public ApplicationStatus getApplicationStatus() {
+        return applicationStatus;
     }
 
     public String getAcceptedRequest() {
-        return AcceptedRequest;
+        return acceptedRequest;
     }
 
     public String getUserID() {
-        return UserID;
+        return userID;
     }
 
-    public AdoptionListing(String adoptionListingID, com.example.petrusapplication.models.Species species, String name, int age, Breed breed1, Breed breed2, com.example.petrusapplication.models.Gender gender, Color color1, Color color2, Color color3, MaturitySize maturitySize, com.example.petrusapplication.models.FurLength furLength, com.example.petrusapplication.models.Vaccinated vaccinated, com.example.petrusapplication.models.Dewormed dewormed, com.example.petrusapplication.models.Sterilized sterilized, com.example.petrusapplication.models.Health health, int quantityRepresented, double fee, String video, String image, String description, LocalDate listingDate, com.example.petrusapplication.models.ApplicationStatus applicationStatus, String acceptedRequest, String userID) {
-        AdoptionListingID = adoptionListingID;
-        Species = species;
-        Name = name;
-        Age = age;
-        Breed1 = breed1;
-        Breed2 = breed2;
-        Gender = gender;
-        Color1 = color1;
-        Color2 = color2;
-        Color3 = color3;
+    public AdoptionListing(String adoptionListingID, Species species, String name, int age, Breed breed1, Breed breed2, Gender gender, Color color1, Color color2, Color color3, MaturitySize maturitySize, FurLength furLength, Vaccinated vaccinated, Dewormed dewormed, Sterilized sterilized, Health health, int quantityRepresented, double fee, String video, String image, String description, LocalDate listingDate, ApplicationStatus applicationStatus, String acceptedRequest, String userID) {
+        this.adoptionListingID = adoptionListingID;
+        this.species = species;
+        this.name = name;
+        this.age = age;
+        this.breed1 = breed1;
+        this.breed2 = breed2;
+        this.gender = gender;
+        this.color1 = color1;
+        this.color2 = color2;
+        this.color3 = color3;
         this.maturitySize = maturitySize;
-        FurLength = furLength;
-        Vaccinated = vaccinated;
-        Dewormed = dewormed;
-        Sterilized = sterilized;
-        Health = health;
-        QuantityRepresented = quantityRepresented;
-        Fee = fee;
-        Video = video;
-        Image = image;
-        Description = description;
-        ListingDate = listingDate;
-        ApplicationStatus = applicationStatus;
-        AcceptedRequest = acceptedRequest;
-        UserID = userID;
+        this.furLength = furLength;
+        this.vaccinated = vaccinated;
+        this.dewormed = dewormed;
+        this.sterilized = sterilized;
+        this.health = health;
+        this.quantityRepresented = quantityRepresented;
+        this.fee = fee;
+        this.video = video;
+        this.image = image;
+        this.description = description;
+        this.listingDate = listingDate;
+        this.applicationStatus = applicationStatus;
+        this.acceptedRequest = acceptedRequest;
+        this.userID = userID;
     }
 
 
 
     public AdoptionListing(JSONObject object){
         try{
-            this.AdoptionListingID = object.getString("adoptionListingID");
-            this.Name = object.getString("name");
-            this.Image = object.getString("image");
+            this.adoptionListingID = object.getString("adoptionListingID");
+            this.name = object.getString("name");
+            this.image = object.getString("image");
             int ordinalStatus = Integer.parseInt(object.getString("applicationStatus"));
-            this.ApplicationStatus = ApplicationStatus.values()[ordinalStatus];
+            this.applicationStatus = ApplicationStatus.values()[ordinalStatus];
 
             int ordinalBreed = Integer.parseInt(object.getString("breed1"));
-            this.Breed1 = Breed1.values()[ordinalBreed];
+            this.breed1 = breed1.values()[ordinalBreed];
 
             int ordinalColor = Integer.parseInt(object.getString("color1"));
-            this.Color1 = Color1.values()[ordinalColor];
+            this.color1 = color1.values()[ordinalColor];
 
-            this.Age = Integer.parseInt(object.getString("age"));
+            this.age = Integer.parseInt(object.getString("age"));
         }
         catch (JSONException e) {
             e.printStackTrace();

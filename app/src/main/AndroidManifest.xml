@@ -12,10 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".AdoptionListingWebViewActivity"></activity>
-        <activity android:name=".ProductDetailActivity" />
+        <activity android:name=".ViewAdoptionRequestsActivity"></activity>
+        <activity android:name=".CreateApplicationActivity" />
+        <activity android:name=".AdoptionListingsApply" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".AdoptionListingActivity" />
         <activity android:name=".AdoptionRequestsActivity" />
+        <activity android:name=".AdoptionListingWebViewActivity" />
+        <activity android:name=".ProductDetailActivity" />
         <activity android:name=".ProductActivity" />
         <activity android:name=".ServiceActivity" />
         <activity android:name=".ServiceDetailActivity" />
