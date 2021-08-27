@@ -4,49 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:gravity="center_horizontal"
     tools:context=".LoginActivity">
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="80sp"
-        android:textSize="45sp"
-        android:fontFamily="@font/roboto_bold"
-        android:textColor="@color/primary_blue"
-        android:id="@+id/LoginPageTitle"
-        android:text="Petrus user portal"
-        android:gravity="center_horizontal"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="80sp"
-        android:id="@+id/title"
-        android:textColor="@color/black"
-        android:text="Login Page"
-        android:textSize="30sp"
-        android:gravity="center_vertical"/>
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0.03"
+        android:text="Login"
+        android:textColor="@color/primary_blue"
+        android:textSize="54dp"
+        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/etSearchTerms"
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:layout_height="wrap_content"
-            android:hint="username" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Welcome back"
+        android:textColor="@color/primary_blue"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnSearch"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Login" />
-
-    </LinearLayout>
+    <EditText
+        android:id="@+id/etSearchTerms"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox1"
+        android:fontFamily="@font/roboto"
+        android:hint="Username"
+        android:paddingLeft="20dp"
+        android:textColor="@color/primary_blue" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="290dp"
-        android:layout_height="wrap_content"
-        android:hint="password" />/>
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/textbox1"
+        android:fontFamily="@font/roboto"
+        android:hint="Password"
+        android:paddingLeft="20dp"
+        android:textColor="@color/primary_blue" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/button1"
+        android:fontFamily="@font/roboto"
+        android:text="Login"
+        android:textColor="@color/light_white_2"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
 </LinearLayout>
