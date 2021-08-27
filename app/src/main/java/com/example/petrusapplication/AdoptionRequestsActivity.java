@@ -5,7 +5,6 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.example.petrusapplication.adapters.AdoptionRequestAdapter;
 import com.example.petrusapplication.clients.AdoptionListingRestClient;
 import com.example.petrusapplication.models.AdoptionRequest;
@@ -32,7 +31,8 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
     }
 
     private void getAdoptionRequest(String id) {
-        AdoptionListingRestClient.get(getApplicationContext(),"AdoptionListingAPI/"+id +"/request", null,
+
+        AdoptionListingRestClient.get(AdoptionRequestsActivity.this, "AdoptionListingAPI/"+id +"/request", null,
                 null, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
@@ -48,7 +48,7 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
                             }
                         }
 
-                        adoptionRequestView = (ListView) findViewById(R.id.list_viewAdoptionRequest);
+                        adoptionRequestView = (ListView) findViewById(R.id.list_adoptionRequest);
                         adoptionRequestView.setAdapter(adoptionRequestAdapter);
                     }
 

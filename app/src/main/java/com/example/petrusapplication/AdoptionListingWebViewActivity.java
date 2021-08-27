@@ -20,7 +20,6 @@ public class AdoptionListingWebViewActivity extends AppCompatActivity {
         WebView webWindow = findViewById(R.id.adoptionListingWebView);
         webWindow.setWebViewClient(new SSLTolerentWebViewClient());
         webWindow.loadUrl("https://10.0.2.2:44327/ApplyAdoption/Details/" + listingId);
-        webWindow.getSettings().setJavaScriptEnabled(true);
 
         Button backBtn = findViewById(R.id.backToListingButton);
         backBtn.setOnClickListener(view -> {

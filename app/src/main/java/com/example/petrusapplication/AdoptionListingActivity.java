@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,15 +29,10 @@ public class AdoptionListingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adoption_listing);
+
+
+
         getAdoptionListing();
-        Button loginBttn=findViewById(R.id.loginButton);
-        loginBttn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void getAdoptionListing() {
@@ -54,7 +48,6 @@ public class AdoptionListingActivity extends AppCompatActivity {
                         for (int i = 0; i < response.length(); i++) {
                             try {
                                 adoptionListingAdapter.add(new AdoptionListing(response.getJSONObject(i)));
-
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
