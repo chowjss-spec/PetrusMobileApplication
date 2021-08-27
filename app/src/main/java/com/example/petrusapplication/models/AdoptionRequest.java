@@ -13,7 +13,7 @@ public class AdoptionRequest {
     private RequestStatus requestStatus;
     private int dogsOwned;
     private String UserID;
-    private String adoptionListingID;
+    private String AdoptionListingID;
     private ApplicationStatus applicationStatus;
     private String name;
     private int age;
@@ -32,7 +32,7 @@ public class AdoptionRequest {
         requestStatus = requestStatus;
         this.dogsOwned = dogsOwned;
         UserID = userID;
-        this.adoptionListingID = adoptionListingID;
+        AdoptionListingID = adoptionListingID;
     }
 
     public String getAdoptionRequestId() {
@@ -88,14 +88,13 @@ public class AdoptionRequest {
     }
 
     public String getAdoptionListingID() {
-        return adoptionListingID;
+        return AdoptionListingID;
     }
-
     public AdoptionRequest(JSONObject object){
         try{
             this.adoptionRequestId = object.getString("adoptionRequestId");
             JSONObject listing = object.getJSONObject("adoptionListing");
-            this.adoptionListingID = listing.getString("adoptionListingID");
+            this.adoptionRequestId = listing.getString("adoptionListingID");
             this.name = listing.getString("name");
             this.image = listing.getString("image");
             int ordinalStatus = Integer.parseInt(listing.getString("applicationStatus"));

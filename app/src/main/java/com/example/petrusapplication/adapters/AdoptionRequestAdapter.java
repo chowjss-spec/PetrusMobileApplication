@@ -1,36 +1,24 @@
 package com.example.petrusapplication.adapters;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.petrusapplication.AdoptionRequestsActivity;
-import com.example.petrusapplication.CreateApplicationActivity;
 import com.example.petrusapplication.R;
-import com.example.petrusapplication.ViewAdoptionRequestsActivity;
-import com.example.petrusapplication.clients.AdoptionRequestDeleteRestClient;
 import com.example.petrusapplication.models.AdoptionRequest;
-import com.loopj.android.http.JsonHttpResponseHandler;
-
-import org.json.JSONException;
 
 import java.util.ArrayList;
 
 public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
     private final Context context;
-    private AdoptionRequestAdapter adapter;
     public AdoptionRequestAdapter(Context context, ArrayList<AdoptionRequest> notes) {
         super(context, R.layout.item_adoptionrequest, notes);
         this.context = context;
-        this.adapter = this;
     }
 
     @Override
@@ -51,13 +39,12 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
             viewHolder.breed = (TextView) convertView.findViewById(R.id.petBreed);
             viewHolder.color = (TextView) convertView.findViewById(R.id.petColor);
             viewHolder.age = (TextView) convertView.findViewById(R.id.petAge);
-            viewHolder.remove = (Button) convertView.findViewById(R.id.removeButton);
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.id.setText(adoptionRequest.getAdoptionListingID());
+        viewHolder.id.setText(adoptionRequest.getAdoptionRequestId());
         viewHolder.title.setText(adoptionRequest.getName());
         String imgName = adoptionRequest.getImage();
         String imgTrimmed = imgName.substring(0,imgName.lastIndexOf(".")).toLowerCase();
@@ -67,19 +54,6 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
         viewHolder.breed.setText(adoptionRequest.getBreed1().name());
         viewHolder.color.setText(adoptionRequest.getColor1().name());
         viewHolder.age.setText(String.valueOf(adoptionRequest.getAge()));
-        viewHolder.remove.setOnClickListener(view -> {
-            Intent intent = new Intent(context, AdoptionRequestsActivity.class);
-            AdoptionRequestDeleteRestClient adoptionRequestDeleteRestClient= new AdoptionRequestDeleteRestClient(context);
-            String requestId = adoptionRequest.getAdoptionRequestId();
-            try {
-                adoptionRequestDeleteRestClient.executeAdoptionRequestDeleteRestClient(requestId,new JsonHttpResponseHandler(){
-                });
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            ((Activity)context).recreate();
-            ((Activity)context).overridePendingTransition( 0, 0);;
-        });
 
 
         return convertView;
@@ -93,7 +67,6 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
         TextView breed;
         TextView color;
         TextView age;
-        Button remove;
     }
 
 

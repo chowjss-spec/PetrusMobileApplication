@@ -1,7 +1,6 @@
 package com.example.petrusapplication;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +27,7 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adoption_requests);
         String adoptionId = getIntent().getStringExtra("listing");
+        System.out.println("this is adoption Id"+adoptionId);
         getAdoptionRequest(adoptionId);
     }
 
@@ -47,11 +47,9 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                         }
+
                         adoptionRequestView = (ListView) findViewById(R.id.list_viewAdoptionRequest);
                         adoptionRequestView.setAdapter(adoptionRequestAdapter);
-
-
-
                     }
 
                     @Override
