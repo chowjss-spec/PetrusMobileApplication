@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.petrusapplication.AdoptionListing;
+import com.example.petrusapplication.models.AdoptionListing;
 import com.example.petrusapplication.CreateApplicationActivity;
 import com.example.petrusapplication.R;
 

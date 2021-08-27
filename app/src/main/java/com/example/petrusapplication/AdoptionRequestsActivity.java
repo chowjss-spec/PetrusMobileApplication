@@ -48,7 +48,7 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
                             }
                         }
 
-                        adoptionRequestView = (ListView) findViewById(R.id.list_adoptionRequest);
+                        adoptionRequestView = (ListView) findViewById(R.id.list_viewAdoptionRequest);
                         adoptionRequestView.setAdapter(adoptionRequestAdapter);
                     }
 

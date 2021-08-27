@@ -48,9 +48,16 @@ public class UserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(),AdoptionListingsApply.class);
                 startActivity(intent);
-
             }
         });
+        Button viewAdoptionRequest = findViewById(R.id.viewAdoptionRequest);
+        viewAdoptionRequest.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(),ViewAdoptionRequestsActivity.class);
+            startActivity(intent);
+        });
+
+
+
     }
     public static String printJsonObjectByKeyName(JSONObject jsonObj, String keyName) throws JSONException {
         String output="";
