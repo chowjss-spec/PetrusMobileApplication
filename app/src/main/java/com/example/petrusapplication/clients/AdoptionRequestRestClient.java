@@ -50,11 +50,6 @@ public class AdoptionRequestRestClient {
         this.loopjListener = listener;
     }
 
-//    public static void post(Context context, StringEntity entity, String contentType, JsonHttpResponseHandler responseHandler) {
-//        client.post(context,BASE_URL,entity,contentType,responseHandler);
-//    }
-
-
     public void executeAdoptionRequestRestClient(String userId,JsonHttpResponseHandler responseHandler) throws JSONException{
         client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
         JSONObject json = new JSONObject();
@@ -62,40 +57,6 @@ public class AdoptionRequestRestClient {
         StringEntity entity = new StringEntity(json.toString(), "UTF-8");
 
         client.post(context,BASE_URL, entity,"application/json",responseHandler);
-//                {
-//            @Override
-//            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-//                super.onSuccess(statusCode, headers, response);
-//                if (response!=null){
-//                    try {
-//                        System.out.println(response.getJSONObject(0));
-//
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-////                    jsonResponse = response.toString();
-////                loopjListener.taskCompleted(jsonResponse);
-////                Log.i("login","onSuccess: " + jsonResponse);
-//                ArrayList<AdoptionRequest> adoptionRequestArray = new ArrayList<AdoptionRequest>();
-//                AdoptionRequestAdapter adoptionRequestAdapter = new AdoptionRequestAdapter(context, adoptionRequestArray);
-//
-//                for (int i = 0; i < response.length(); i++) {
-//                    try {
-//                        adoptionRequestAdapter.add(new AdoptionRequest(response.getJSONObject(i)));
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//
-//
-//            }
-//
-//            @Override
-//            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-//                super.onFailure(statusCode, headers, throwable, errorResponse);
-////                Log.e("login", "onFailure: " + errorResponse);
-//            }
 
     }
 }

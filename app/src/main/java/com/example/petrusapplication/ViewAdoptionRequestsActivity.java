@@ -3,9 +3,11 @@ package com.example.petrusapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.petrusapplication.adapters.AdoptionListingAdapter;
@@ -44,14 +46,15 @@ public class ViewAdoptionRequestsActivity extends AppCompatActivity implements O
         SharedPreferences appSharedPrefs = this.getSharedPreferences(
                 "petrus", Context.MODE_PRIVATE);
         String results = appSharedPrefs.getString("userDetails", "");
-//        try {
-//            userId=UserActivity.printJsonObjectByKeyName(new JSONObject(results),"userID");
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            userId=UserActivity.printJsonObjectByKeyName(new JSONObject(results),"userID");
+            System.out.println("the userID Currently is " + userId);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         adoptionRequestRestClient = new AdoptionRequestRestClient(this,this);
         try{
-            adoptionRequestRestClient.executeAdoptionRequestRestClient("1", new JsonHttpResponseHandler(){
+            adoptionRequestRestClient.executeAdoptionRequestRestClient(userId, new JsonHttpResponseHandler(){
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                     super.onSuccess(statusCode, headers, response);
@@ -84,11 +87,6 @@ public class ViewAdoptionRequestsActivity extends AppCompatActivity implements O
                     super.onFailure(statusCode, headers, throwable, errorResponse);
 //                Log.e("login", "onFailure: " + errorResponse);
                 }
-
-
-
-
-
 
             });
 
