@@ -1,6 +1,8 @@
 package com.example.petrusapplication;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -34,6 +36,7 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
     private void getAdoptionRequest(String id) {
         AdoptionListingRestClient.get(getApplicationContext(),"AdoptionListingAPI/"+id +"/request", null,
                 null, new JsonHttpResponseHandler() {
+                    @SuppressLint("ResourceType")
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                         ArrayList<AdoptionRequest> adoptionRequestArray = new ArrayList<AdoptionRequest>();
@@ -49,9 +52,6 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
                         }
                         adoptionRequestView = (ListView) findViewById(R.id.list_viewAdoptionRequest);
                         adoptionRequestView.setAdapter(adoptionRequestAdapter);
-
-
-
                     }
 
                     @Override

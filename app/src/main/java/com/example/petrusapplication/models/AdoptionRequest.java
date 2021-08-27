@@ -107,10 +107,6 @@ public class AdoptionRequest {
             this.age = Integer.parseInt(listing.getString("age"));
 
 
-
-//            System.out.println(listing.getString("adoptionListingID"));
-//            System.out.println("listing value is " + listing.getString("adoptionListingID"));
-//            System.out.println("the value is " +object.getString("adoptionRequestId"));
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -119,7 +115,3 @@ public class AdoptionRequest {
 
 }
 
-enum Residence
-{
-    Pending, HDB, Private
-}

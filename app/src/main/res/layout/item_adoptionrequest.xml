@@ -10,8 +10,8 @@
         android:id="@+id/imagePet"
         android:layout_width="120dp"
         android:layout_height="80dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/placeholder" />
@@ -22,13 +22,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:text="Status:"
-        android:textStyle="bold"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imagePet" />
+        android:text="Status:"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imagePet"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/adoptionStatus"
@@ -36,13 +36,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="8dp"
-        android:text="AdoptionStatus"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
         android:fontFamily="@font/roboto"
+        android:text="AdoptionStatus"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/label_petStatus" />
+        app:layout_constraintStart_toEndOf="@id/label_petStatus"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/label_petId"
@@ -50,13 +50,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:text="Pet Id:"
-        android:textStyle="bold"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/label_petStatus"
-        app:layout_constraintStart_toEndOf="@id/imagePet" />
+        android:text="Pet Id:"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imagePet"
+        app:layout_constraintTop_toBottomOf="@id/label_petStatus" />
 
     <TextView
         android:id="@+id/value_note_id"
@@ -64,13 +64,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="8dp"
-        android:text="ValueId"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
-        android:textStyle="bold"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/adoptionStatus"
-        app:layout_constraintStart_toEndOf="@id/label_petId" />
+        android:text="ValueId"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/label_petId"
+        app:layout_constraintTop_toBottomOf="@id/adoptionStatus" />
 
     <TextView
         android:id="@+id/label_petName"
@@ -78,13 +78,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:text="Name:"
-        android:textStyle="bold"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/label_petId"
-        app:layout_constraintStart_toEndOf="@id/imagePet" />
+        android:text="Name:"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imagePet"
+        app:layout_constraintTop_toBottomOf="@id/label_petId" />
 
     <TextView
         android:id="@+id/value_note_title"
@@ -92,13 +92,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="8dp"
-        android:text="ValueTitle"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
-        android:textStyle="bold"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/value_note_id"
-        app:layout_constraintStart_toEndOf="@id/label_petName" />
+        android:text="ValueTitle"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/label_petName"
+        app:layout_constraintTop_toBottomOf="@id/value_note_id" />
 
     <TextView
         android:id="@+id/label_petBreed"
@@ -106,13 +106,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:text="Breed:"
-        android:textStyle="bold"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/label_petName"
-        app:layout_constraintStart_toEndOf="@id/imagePet" />
+        android:text="Breed:"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imagePet"
+        app:layout_constraintTop_toBottomOf="@id/label_petName" />
 
     <TextView
         android:id="@+id/petBreed"
@@ -120,13 +120,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="8dp"
-        android:text="Breed"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
-        android:textStyle="bold"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/value_note_title"
-        app:layout_constraintStart_toEndOf="@id/label_petBreed" />
+        android:text="Breed"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/label_petBreed"
+        app:layout_constraintTop_toBottomOf="@id/value_note_title" />
 
     <TextView
         android:id="@+id/label_petColor"
@@ -134,13 +134,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:text="Color:"
-        android:textStyle="bold"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/label_petBreed"
-        app:layout_constraintStart_toEndOf="@id/imagePet" />
+        android:text="Color:"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imagePet"
+        app:layout_constraintTop_toBottomOf="@id/label_petBreed" />
 
     <TextView
         android:id="@+id/petColor"
@@ -148,13 +148,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="8dp"
-        android:text="Pet Color"
-        android:textSize="14dp"
-        android:textColor="@color/oxford_blue"
-        android:textStyle="bold"
         android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/petBreed"
-        app:layout_constraintStart_toEndOf="@id/label_petColor" />
+        android:text="Pet Color"
+        android:textColor="@color/oxford_blue"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/label_petColor"
+        app:layout_constraintTop_toBottomOf="@id/petBreed" />
 
     <TextView
         android:id="@+id/label_Age"
@@ -162,14 +162,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
         android:paddingBottom="8dp"
         android:text="Age:"
-        android:textStyle="bold"
-        android:textSize="14dp"
         android:textColor="@color/oxford_blue"
-        android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/label_petColor"
-        app:layout_constraintStart_toEndOf="@id/imagePet" />
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imagePet"
+        app:layout_constraintTop_toBottomOf="@id/label_petColor" />
 
     <TextView
         android:id="@+id/petAge"
@@ -177,29 +177,48 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
         android:paddingBottom="8dp"
         android:text="Pet Age"
+        android:textColor="@color/oxford_blue"
         android:textSize="14dp"
         android:textStyle="bold"
-        android:textColor="@color/oxford_blue"
-        android:fontFamily="@font/roboto"
-        app:layout_constraintTop_toBottomOf="@id/petColor"
-        app:layout_constraintStart_toEndOf="@id/label_Age" />
+        app:layout_constraintStart_toEndOf="@id/label_Age"
+        app:layout_constraintTop_toBottomOf="@id/petColor" />
 
     <Button
+
+        android:id="@+id/editButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/removeButton"
-        android:backgroundTint="@color/primary_blue"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginEnd="10dp"
-        android:textColor="@color/light_white_2"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/primary_blue"
         android:fontFamily="@font/roboto"
-        android:textStyle="bold"
-        android:text="DELETE"
+        android:text="EDIT"
+        android:textAlignment="center"
+        android:textColor="@color/light_white_2"
         android:textSize="12sp"
-        android:textAlignment="center" />
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/primary_blue"
+        android:fontFamily="@font/roboto"
+        android:text="DELETE"
+        android:textAlignment="center"
+        android:textColor="@color/light_white_2"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editButton"
+        app:layout_constraintTop_toBottomOf="@+id/editButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

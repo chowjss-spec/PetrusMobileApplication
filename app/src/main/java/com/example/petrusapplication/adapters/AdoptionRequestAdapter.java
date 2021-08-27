@@ -12,17 +12,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.petrusapplication.AdoptionRequestEditActivity;
 import com.example.petrusapplication.AdoptionRequestsActivity;
 import com.example.petrusapplication.CreateApplicationActivity;
 import com.example.petrusapplication.R;
 import com.example.petrusapplication.ViewAdoptionRequestsActivity;
 import com.example.petrusapplication.clients.AdoptionRequestDeleteRestClient;
+import com.example.petrusapplication.clients.AdoptionRequestEditRestClient;
 import com.example.petrusapplication.models.AdoptionRequest;
+import com.example.petrusapplication.models.Residence;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONException;
 
 import java.util.ArrayList;
+
+import static java.lang.String.valueOf;
 
 public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
     private final Context context;
@@ -38,6 +43,7 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
         AdoptionRequest adoptionRequest = getItem(position);
         ViewHolder viewHolder;
 
+
         if (convertView == null) {
             viewHolder = new ViewHolder();
 
@@ -52,11 +58,13 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
             viewHolder.color = (TextView) convertView.findViewById(R.id.petColor);
             viewHolder.age = (TextView) convertView.findViewById(R.id.petAge);
             viewHolder.remove = (Button) convertView.findViewById(R.id.removeButton);
+            viewHolder.edit = (Button) convertView.findViewById(R.id.editButton);
 
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
+
         viewHolder.id.setText(adoptionRequest.getAdoptionListingID());
         viewHolder.title.setText(adoptionRequest.getName());
         String imgName = adoptionRequest.getImage();
@@ -66,7 +74,9 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
         viewHolder.status.setText(adoptionRequest.getApplicationStatus().name());
         viewHolder.breed.setText(adoptionRequest.getBreed1().name());
         viewHolder.color.setText(adoptionRequest.getColor1().name());
-        viewHolder.age.setText(String.valueOf(adoptionRequest.getAge()));
+        viewHolder.age.setText(valueOf(adoptionRequest.getAge()));
+
+        //Set onClickListener
         viewHolder.remove.setOnClickListener(view -> {
             Intent intent = new Intent(context, AdoptionRequestsActivity.class);
             AdoptionRequestDeleteRestClient adoptionRequestDeleteRestClient= new AdoptionRequestDeleteRestClient(context);
@@ -81,6 +91,15 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
             ((Activity)context).overridePendingTransition( 0, 0);;
         });
 
+        viewHolder.edit.setOnClickListener(view -> {
+            Intent intent = new Intent(context, AdoptionRequestEditActivity.class);
+//            System.out.println("the current adoptionListing is "+ adoptionRequest.getAdoptionListingID());
+            intent.putExtra("adoptionRequestId", adoptionRequest.getAdoptionRequestId());
+            intent.putExtra("adoptionListingId", adoptionRequest.getAdoptionListingID());
+            ((Activity)context).startActivity(intent);
+        });
+
+
 
         return convertView;
     }
@@ -94,6 +113,7 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
         TextView color;
         TextView age;
         Button remove;
+        Button edit;
     }
 
 

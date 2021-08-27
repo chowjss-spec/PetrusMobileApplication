@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ViewAdoptionRequestsActivity"></activity>
+        <activity android:name=".AdoptionRequestEditActivity"></activity>
+        <activity android:name=".ViewAdoptionRequestsActivity" />
         <activity android:name=".CreateApplicationActivity" />
         <activity android:name=".AdoptionListingsApply" />
         <activity android:name=".UserActivity" />

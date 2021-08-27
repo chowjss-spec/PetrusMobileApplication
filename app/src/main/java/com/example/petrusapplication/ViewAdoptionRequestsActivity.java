@@ -79,7 +79,6 @@ public class ViewAdoptionRequestsActivity extends AppCompatActivity implements O
                     adoptionRequestView = (ListView) findViewById(R.id.list_viewAdoptionRequest);
                     adoptionRequestView.setAdapter(adoptionRequestAdapter);
 
-
                 }
 
                 @Override
