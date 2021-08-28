@@ -9,15 +9,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Products"
+        android:text="Pet Products Listing"
         android:textSize="30dp"
         android:id="@+id/title"
-        android:textColor="@color/primary_blue"
+        android:textColor="@color/oxford_blue"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/recyclerview"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="0dp"

@@ -37,11 +37,6 @@ public class AdoptionRequestRestClient {
 
     private static final String BASE_URL = "https://10.0.2.2:44327/AdoptionListingAPI/request";
 
-//    private static AsyncHttpClient client = new AsyncHttpClient();
-
-//    static {
-//        client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
-//    }
 
     public AdoptionRequestRestClient(Context context, OnLoopjCompleted listener) {
         client = new AsyncHttpClient();
