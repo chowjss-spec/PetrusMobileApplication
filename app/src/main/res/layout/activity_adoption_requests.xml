@@ -31,12 +31,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="70dp" >
 
-        <TextView
-            android:id="@+id/textWhenEmpty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:text="You have not made any requests yet" />
+
     </ListView>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -51,5 +46,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

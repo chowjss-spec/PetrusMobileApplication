@@ -4,7 +4,9 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -42,7 +44,6 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
                         ArrayList<AdoptionRequest> adoptionRequestArray = new ArrayList<AdoptionRequest>();
                         AdoptionRequestAdapter adoptionRequestAdapter = new AdoptionRequestAdapter(AdoptionRequestsActivity.this, adoptionRequestArray);
 
-
                         for (int i = 0; i < response.length(); i++) {
                             try {
                                 adoptionRequestAdapter.add(new AdoptionRequest(response.getJSONObject(i)));
@@ -52,6 +53,8 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
                         }
                         adoptionRequestView = (ListView) findViewById(R.id.list_viewAdoptionRequest);
                         adoptionRequestView.setAdapter(adoptionRequestAdapter);
+//                        System.out.println("success");
+
                     }
 
                     @Override
@@ -59,6 +62,11 @@ public class AdoptionRequestsActivity extends AppCompatActivity {
                         System.out.println(statusCode);
                         System.out.println(responseString);
                         throwable.printStackTrace();
+//                        ImageView whenEmpty = findViewById(R.id.whenEmpty);
+//                        adoptionRequestView.setVisibility(View.GONE);
+//                        whenEmpty.setVisibility(View.VISIBLE);
+//                        System.out.println("failure");
+
                     }
                 });
     }
