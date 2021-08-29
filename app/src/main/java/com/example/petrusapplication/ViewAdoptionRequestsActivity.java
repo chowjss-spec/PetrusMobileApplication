@@ -47,7 +47,7 @@ public class ViewAdoptionRequestsActivity extends AppCompatActivity implements O
                 "petrus", Context.MODE_PRIVATE);
         String results = appSharedPrefs.getString("userDetails", "");
         try {
-            userId=UserActivity.printJsonObjectByKeyName(new JSONObject(results),"userID");
+            userId=UserActivity.printJsonObjectByKeyName(new JSONObject(results),"id");
             System.out.println("the userID Currently is " + userId);
         } catch (JSONException e) {
             e.printStackTrace();

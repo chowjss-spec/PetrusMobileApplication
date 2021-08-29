@@ -112,7 +112,7 @@ public class AdoptionRequest {
             int ordinalRequestStatus = Integer.parseInt(object.getString("requestStatus"));
             this.requestStatus = requestStatus.values()[ordinalRequestStatus];
             JSONObject user = listing.getJSONObject("user");
-            this.listerEmail=user.getString("emailAddress");
+            this.listerEmail=user.getString("email");
 //            System.out.println("email address is currently" + user.getString("emailAddress"));
         }
         catch (JSONException e) {

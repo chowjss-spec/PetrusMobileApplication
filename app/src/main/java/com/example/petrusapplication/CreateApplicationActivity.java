@@ -40,12 +40,13 @@ public class CreateApplicationActivity extends AppCompatActivity implements OnLo
                 "petrus", Context.MODE_PRIVATE);
         String results = appSharedPrefs.getString("userDetails", "");
         try {
-            userId=UserActivity.printJsonObjectByKeyName(new JSONObject(results),"userID");
+            userId=UserActivity.printJsonObjectByKeyName(new JSONObject(results),"id");
         } catch (JSONException e) {
             e.printStackTrace();
         }
         TextView userid=findViewById(R.id.userId);
         userid.setText("User ID: "+userId);
+
         TextView adoptionId=findViewById(R.id.adoptionId);
         adoptionId.setText("Adoption Listing ID: "+adoptionListingId);
 
