@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.petrusapplication.adapters.AdoptionListingAdapter;
@@ -42,6 +44,7 @@ public class ViewAdoptionRequestsActivity extends AppCompatActivity implements O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_adoption_requests);
+        ImageView whenEmpty = findViewById(R.id.whenEmpty);
 
         SharedPreferences appSharedPrefs = this.getSharedPreferences(
                 "petrus", Context.MODE_PRIVATE);
@@ -79,12 +82,26 @@ public class ViewAdoptionRequestsActivity extends AppCompatActivity implements O
                     adoptionRequestView = (ListView) findViewById(R.id.list_viewAdoptionRequest);
                     adoptionRequestView.setAdapter(adoptionRequestAdapter);
 
+//                    System.out.println("value of response = " + response.length());
+
+                    if(response.length()==0){
+                        adoptionRequestView.setVisibility(View.GONE);
+                        if(whenEmpty!=null){
+                            whenEmpty.setVisibility(View.VISIBLE);
+                            whenEmpty.setOnClickListener(view -> {
+                                finish();
+                            });
+                        }
+
+                    }
+
                 }
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                     super.onFailure(statusCode, headers, throwable, errorResponse);
 //                Log.e("login", "onFailure: " + errorResponse);
+
                 }
 
             });

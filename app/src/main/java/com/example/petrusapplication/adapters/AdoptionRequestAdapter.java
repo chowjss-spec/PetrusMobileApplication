@@ -130,8 +130,6 @@ public class AdoptionRequestAdapter extends ArrayAdapter<AdoptionRequest> {
             if (intent.resolveActivity(context.getPackageManager()) != null) {
                 ((Activity)context).startActivity(intent);
             }
-
-
         });
 
 
